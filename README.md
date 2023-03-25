@@ -1,3 +1,5 @@
+[![Tests](https://github.com/ifoukarakis/rudderstack-transformations/actions/workflows/test.yml/badge.svg)](https://github.com/ifoukarakis/rudderstack-transformations/actions/workflows/test.yml)
+
 # Sample Rudderstack Transformations
 
 Contains list of rudderstack transformations. Offers an environment that allows unit testing individual transformations.
