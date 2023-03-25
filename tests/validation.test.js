@@ -3,11 +3,12 @@ import {defaultEvent } from './fixtures/default';
 import  {productSchema, personSchema } from './fixtures/schemas';
 import { Contracts } from 'validation';
 
+
 describe('Contracts', () => {
 
-    global.fetch = jest.fn(() => Promise.resolve(productSchema));
+    global.fetch = jest.fn(() => Promise.resolve(productSchema));  // eslint-disable-line no-undef
 
-    test('does not filter valid event when validating properties', async () => {
+    test('do not filter valid event when validating properties', async () => {
         // Price property is in right format.
         const contracts = new Contracts();
         contracts.registerSchemaFromJSON('Add To Cart', productSchema);
@@ -15,7 +16,7 @@ describe('Contracts', () => {
         expect(result).toBe(true);
     });
 
-    test('does filter invalid event when validating properties', async () => {
+    test('do filter invalid event when validating properties', async () => {
         // Price property is in invalid format.
         const contracts = new Contracts();
         contracts.registerSchemaFromJSON('Add To Cart', productSchema);
@@ -23,14 +24,14 @@ describe('Contracts', () => {
         expect(result).toBe(false);
     });
 
-    test('does consider valid event when no schema is registered', async () => {
+    test('do respect allowing unregistered events', async () => {
         const contracts = new Contracts(true);
         contracts.registerSchemaFromJSON('Add To Cart', productSchema);
         const result = contracts.validateProperties(defaultEvent);
         expect(result).toBe(true);
     });
 
-    test('does consider valid event when no schema is registered', async () => {
+    test('do respect not allowing unregistered events', async () => {
         const contracts = new Contracts(false);
         contracts.registerSchemaFromJSON('Add To Cart', productSchema);
         const result = contracts.validateProperties(defaultEvent);

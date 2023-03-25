@@ -36,9 +36,9 @@ export async function transformBatch(events, metadata) {  // eslint-disable-line
     // Replace following line with const contracts = new Contracts(false); if you want to consider unregistered events as invalid.
     const contracts = new Contracts(true);
     // Register event schemas here
-    await contracts.registerSchemaFromURL("Add To Cart", "https://raw.githubusercontent.com/ifoukarakis/tests/main/product.json");
-    await contracts.registerSchemaFromURL("User Registered", "https://raw.githubusercontent.com/ifoukarakis/tests/main/person.json");
+    await contracts.registerSchemaFromURL('Add To Cart', 'https://raw.githubusercontent.com/ifoukarakis/tests/main/product.json');
+    await contracts.registerSchemaFromURL('User Registered', 'https://raw.githubusercontent.com/ifoukarakis/tests/main/person.json');
     // End of event schema registration
 
-    return events.filter(event => contracts.validateProperties(event))
+    return events.filter(event => contracts.validateProperties(event));
 }
