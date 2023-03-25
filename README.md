@@ -6,7 +6,7 @@ Contains list of rudderstack transformations. Offers an environment that allows 
 
 # Transformations
 
-## Validation ([source](src/validation.js))
+## Schema Validation ([source](src/validation.js))
 
 <details>
 <summary>Asserts the event's properties follow the constraints of a JSON schema.</summary> 
