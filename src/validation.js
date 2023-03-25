@@ -15,7 +15,7 @@ export async function validateProperties(event, schema) {
     return event;
 }
 
-export async function transformEvent(event, metadata) {
+export async function transformEvent(event, metadata) {  // eslint-disable-line no-unused-vars
     const res = await fetch('https://raw.githubusercontent.com/ifoukarakis/tests/main/schema.json');
     const schema = new Schema(res);
     if(!schema.validate(event.properties)) return;
