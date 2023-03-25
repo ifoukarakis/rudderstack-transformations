@@ -100,16 +100,15 @@ export async function transformBatch(events, metadata) {
 </details>
 
 <details>
-<summary>Examples</summary>
-</details>
-
-<details>
 <summary>Notes/Troubleshooting</summary>
 - Only `JSONSchema draft-2020-12` is currently supported.
 - Make sure that `await` is before the call to `contracts.registerSchemaFrom...`.
 </details>
 
 
+# Developing
+
+This repo can also be used as a sample structure for developing your own transformations. Read more in [Developing](docs/Developing.md).
 
 # Roadmap
 
