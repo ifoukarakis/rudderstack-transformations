@@ -1,4 +1,4 @@
-import { Schema } from '../vendor/jsonschema';
+import { Schema } from 'jsonschema';
 
 
 export function loadSchemaFromJSON(value) {
@@ -21,5 +21,3 @@ export async function transformEvent(event, metadata) {
     if(!schema.validate(event.properties)) return;
     return event;
 }
-
-console.log(await transformEvent({}, {}));
