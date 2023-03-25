@@ -1,4 +1,4 @@
-[![Tests](https://github.com/ifoukarakis/rudderstack-transformations/actions/workflows/test.yml/badge.svg)](https://github.com/ifoukarakis/rudderstack-transformations/actions/workflows/test.yml)
+[![Test transformations](https://github.com/ifoukarakis/rudderstack-transformations/actions/workflows/test.yml/badge.svg)](https://github.com/ifoukarakis/rudderstack-transformations/actions/workflows/test.yml)
 
 # Sample Rudderstack Transformations
 
@@ -9,7 +9,7 @@ Contains list of rudderstack transformations. Offers an environment that allows 
 ## Schema Validation ([source](src/validation.js))
 
 <details>
-<summary>Asserts the event's properties follow the constraints of a JSON schema.</summary> 
+<summary><b>Asserts the event's properties follow the constraints of a JSON schema.</b></summary> 
 
 One of the most common challenges when gathering data is agreement between all involved stakeholders on the format, structure, and semantics of data. One popular solution is to apply "data contracts" to ensure that different systems or components communicate effectively and accurately. The `validation` transformation uses JSON Schema specification to assert that event's [properties](https://www.rudderstack.com/docs/event-spec/standard-events/track/#properties) obey the agreed constraints.
 
