@@ -42,7 +42,7 @@ export const validBook = {
         },
         'userAgent': 'Dalvik/2.1.0 (Linux; U; Android 9; AOSP on IA Emulator Build/PSR1.180720.117)'
     },
-    'event': 'Product Clicked',
+    'event': 'Add To Cart',
     'integrations': {
         'All': true
     },
@@ -101,7 +101,7 @@ export const invalidBook = {
         },
         'userAgent': 'Dalvik/2.1.0 (Linux; U; Android 9; AOSP on IA Emulator Build/PSR1.180720.117)'
     },
-    'event': 'Product Clicked',
+    'event': 'Add To Cart',
     'integrations': {
         'All': true
     },
